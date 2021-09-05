@@ -7,11 +7,6 @@ from collections import OrderedDict
 from random import randint
 
 
-# def base_view(request):
-#     context = {'title': data.title, 'departures': data.departures}
-#     return render(request, 'tours/base.html', context=context)
-
-
 def main_view(request):
     """Генерирую словарь с 6 рандомными турами"""
     num_random_positions = set()
@@ -47,9 +42,9 @@ def departure_view(request, departure):
     return render(request, 'tours/departure.html', context=context)
 
 
-def tour_view(request, departure, id):
+def tour_view(request, departure, tour_id):
     try:
-        tour = data.tours[id]
+        tour = data.tours[tour_id]
     except KeyError:
         raise Http404
     """Генерируем нужное колличество звезд"""
@@ -57,7 +52,7 @@ def tour_view(request, departure, id):
     """Получаем место отправления"""
     departure_with = data.departures.get(tour.get('departure'))
 
-    context = {'tour_id': id, 'tour': tour, 'stars': stars, 'departure_with': departure_with}
+    context = {'tour_id': tour_id, 'tour': tour, 'stars': stars, 'departure_with': departure_with}
 
     return render(request, 'tours/tour.html', context=context)
 

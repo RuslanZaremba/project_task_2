@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+
 from tours import views
 
 
@@ -23,8 +24,7 @@ urlpatterns = [
 
     path('', views.main_view, name='index'),
     path('tours/departure/<str:departure>/', views.departure_view, name='departure'),
-    path('tours/departure/<str:departure>/tour/<int:id>/', views.tour_view, name='tour'),
-    # path('tours/tour/<int:id>/', views.tour_view, name='tour'),   мой старый путь до тура
+    path('tours/departure/<str:departure>/tour/<int:tour_id>/', views.tour_view, name='tour'),
 
 ]
 
