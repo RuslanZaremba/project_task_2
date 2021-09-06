@@ -21,7 +21,6 @@ from tours import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-
     path('', views.main_view, name='index'),
     path('tours/departure/<str:departure>/', views.departure_view, name='departure'),
     path('tours/departure/<str:departure>/tour/<int:tour_id>/', views.tour_view, name='tour'),

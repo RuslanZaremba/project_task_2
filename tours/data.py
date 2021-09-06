@@ -244,23 +244,3 @@ tours = {
         "date": "24 января",
     }
 }
-
-# from collections import OrderedDict
-#
-# new2 = dict()
-# new = OrderedDict(tours)
-# for i in new:
-#     if new[i]['departure'] == 'msk':
-#         new2[i] = new[i]
-# print(new2)
-
-# for k,v in tours.items():
-#     if v['departure'] == 'msk':
-#         print (k,v)
-# new3 = dict(k,v in tours.items() if v['departure'] == 'msk')
-
-# new = OrderedDict(tours)
-# new3 = {i:new[i] if new[i]['departure'] == 'msk' for i in new}
-# for i in new:
-#     print(new[i])
-
