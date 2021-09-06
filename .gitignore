@@ -1,10 +1,10 @@
 *.pyc
 *~
+*.flake8
+__init__.py
 __pycache__
 venv/
 db.sqlite3
 /static
 .DS_Store
 .idea/
-*.flake8
-__init__.py
